@@ -21,9 +21,9 @@ class Scrape
       accumulate_and_clear(all_results, result)
 
       all_results.each do |res|
-        if res[:filename]
-          FileUtils.touch(res[:filename])
-          File.open(res[:filename], 'w') {|f| f.write res.to_yaml }
+        if res['filename']
+          FileUtils.touch(res['filename'])
+          File.open(res['filename'], 'w') {|f| f.write res.to_yaml }
         end
       end
     end
@@ -33,8 +33,8 @@ class Scrape
     def extract_h2_tag_into(result, child)
       file_name = child.text.downcase.gsub(/[^a-z0-9]/, '_').gsub(/(_)+/, '_').gsub(/_$/, '')
 
-      result[:filename] = File.join(output_dir, "#{file_name}.yml")
-      result[:title] = child.text
+      result['filename'] = File.join(output_dir, "#{file_name}.yml")
+      result['title'] = child.text
     end
 
     def accumulate_and_clear(all_items, item)
