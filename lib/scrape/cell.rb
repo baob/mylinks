@@ -1,5 +1,7 @@
+require 'yaml'
+
 class Scrape
-  class Scrape::Cell
+  class Cell
 
     attr_reader :cell, :output_dir
 

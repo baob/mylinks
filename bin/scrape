@@ -2,4 +2,4 @@
 
 require_relative '../lib/scrape'
 
-Scrape.new.run
+Scrape.new(dir: 'data').run
