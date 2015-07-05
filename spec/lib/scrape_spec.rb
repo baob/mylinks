@@ -44,6 +44,16 @@ describe Scrape do
           expect { subject.run }.to change{ Dir.exist?( File.join(test_dir, page)) }.to be_truthy
         end
       end
+
+      describe 'in daily directory' do
+
+        %w( really_daily really_weekly frequent ).each do |cell|
+          specify "creates cell #{cell}.yml" do
+            expect { subject.run }.to change{ File.exist?( File.join(test_dir, 'daily', "#{cell}.yml")) }.to be_truthy
+          end
+        end
+
+      end
     end
   end
 end
