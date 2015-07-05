@@ -23,6 +23,7 @@ class Scrape
       all_results.each do |res|
         if res[:filename]
           FileUtils.touch(res[:filename])
+          File.open(res[:filename], 'w') {|f| f.write res.to_yaml }
         end
       end
     end

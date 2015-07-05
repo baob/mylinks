@@ -1,5 +1,6 @@
 require_relative '../../lib/scrape'
 require 'fileutils'
+require 'yaml'
 
 describe Scrape do
   describe 'instantiated without params' do
@@ -51,6 +52,18 @@ describe Scrape do
           specify "creates cell #{cell}.yml" do
             expect { subject.run }.to change{ File.exist?( File.join(test_dir, 'daily', "#{cell}.yml")) }.to be_truthy
           end
+        end
+
+        describe 'in really_daily.yml cell' do
+          before do
+            subject.run
+          end
+          let(:cell_file) { File.join(test_dir, 'daily', 'really_daily.yml') }
+          let(:cell) { YAML.load( File.open(cell_file)) }
+
+          specify { expect(cell).not_to be_falsey }
+          specify { expect(cell).to match(a_hash_including(title: 'Really Daily')) }
+          specify { expect(cell).to match(a_hash_including(filename: cell_file)) }
         end
 
       end
