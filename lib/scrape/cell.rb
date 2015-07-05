@@ -16,6 +16,14 @@ class Scrape
         if child.name == 'h2'
           accumulate_and_clear(all_results, result)
           extract_h2_tag_into(result, child)
+        elsif child.name == 'table'
+          child.css('tr > td').children.each do |internal_cell|
+            if internal_cell.name == 'hr'
+              extract_hr_tag_into(result, internal_cell)
+            elsif internal_cell.name == 'a'
+              extract_anchor_tag_into(result, internal_cell)
+            end
+          end
         end
       end
       accumulate_and_clear(all_results, result)
@@ -35,6 +43,17 @@ class Scrape
 
       result['filename'] = File.join(output_dir, "#{file_name}.yml")
       result['title'] = child.text
+    end
+
+    def extract_hr_tag_into(result, child)
+      result['elements'] ||= []
+      result['elements'] << 'hr'
+    end
+
+    def extract_anchor_tag_into(result, child)
+      anchor = { 'anchor' => { 'href' => child.attributes['href'].value.strip, 'text' => child.text.strip } }
+      result['elements'] ||= []
+      result['elements'] << anchor
     end
 
     def accumulate_and_clear(all_items, item)
