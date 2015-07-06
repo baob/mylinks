@@ -13,9 +13,14 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
-gem 'rspec'
-gem 'guard'
-gem 'guard-rspec'
-gem 'terminal-notifier-guard'
-gem 'nokogiri'
+# Sass plugin
+gem 'sass'
 
+# Linter for the project scss
+gem 'scss-lint'
+
+# Autoprefixer
+gem 'middleman-autoprefixer'
+
+# EJS
+gem "ejs"

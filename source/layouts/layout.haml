@@ -1,0 +1,17 @@
+!!!
+%html.no-js
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'IE=edge,chrome=1', http_equiv: 'X-UA-Compatible' }
+    %meta{ content: 'width=device-width', name: 'viewport' }
+
+    %title= current_page.data.title || "Hamlman"
+
+    = javascript_include_tag 'dependencies/modernizr'
+    = stylesheet_link_tag 'application'
+
+  %body{ class: page_classes }
+
+    = yield
+
+    = javascript_include_tag 'application'
