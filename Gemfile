@@ -24,3 +24,9 @@ gem 'middleman-autoprefixer'
 
 # EJS
 gem "ejs"
+
+gem 'rspec'
+gem 'guard'
+gem 'guard-rspec'
+gem 'terminal-notifier-guard'
+gem 'nokogiri'
