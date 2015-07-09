@@ -1,0 +1,11 @@
+---
+title: dailyplay
+---
+- data = yaml_load_files('data/dailyplay')
+%table{border: 5}
+
+  %tr
+    %td
+      = partial 'nav.html.haml'
+    %td
+      = partial 'cell.html.haml', locals: data[:bass]

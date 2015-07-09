@@ -1,0 +1,17 @@
+---
+title: CELL
+---
+
+%h2
+  = locals['title']
+
+%table{border: 5}
+  - locals['elements'].each do |elem|
+    %tr
+      %td
+        - elem.each do |tag, attribs|
+          - if tag == 'anchor'
+            %a{href: attribs['href']}
+              = attribs['text']
+          - elsif tag == 'hr'
+            %hr
