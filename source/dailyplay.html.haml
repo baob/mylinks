@@ -2,10 +2,32 @@
 title: dailyplay
 ---
 - data = yaml_load_files('data/dailyplay')
-%table{border: 5}
+%table{border: 1, cellpadding: 9}
 
   %tr
-    %td
+    %td{valign: :top, rowspan: 4}
       = partial 'nav.html.haml'
-    %td
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:discovery]
+    %td{valign: :top, rowspan: 2}
+      = partial 'cell.html.haml', locals: data[:tv]
+    %td{valign: :top, rowspan: 2}
       = partial 'cell.html.haml', locals: data[:bass]
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:buy_sell]
+
+  %tr
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:discovery_music]
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:buy_sell_pedals]
+
+  %tr
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:discovery_film_comics]
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:ents_events]
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:find_a_band]
+    %td{valign: :top, rowspan: 1}
+      = partial 'cell.html.haml', locals: data[:buy_sell_bass]

@@ -2,16 +2,18 @@
 title: CELL
 ---
 
+- target = locals['target'] || '_blank'
+
 %h2
   = locals['title']
 
-%table{border: 5}
+%table{border: 0}
   - locals['elements'].each do |elem|
     %tr
       %td
         - elem.each do |tag, attribs|
           - if tag == 'anchor'
-            %a{href: attribs['href']}
+            %a{href: attribs['href'], target: target}
               = attribs['text']
           - elsif tag == 'hr'
             %hr
