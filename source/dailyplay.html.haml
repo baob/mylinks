@@ -5,8 +5,7 @@ title: dailyplay
 %table{border: 1, cellpadding: 9}
 
   %tr
-    %td{valign: :top, rowspan: 4}
-      = partial 'nav'
+    = partial 'td_nav', locals: {rowspan: 4}
     = partial 'td_cell', locals: data[:discovery].merge(rowspan: 1)
     %td{valign: :top, rowspan: 2}
       = partial 'cell', locals: data[:tv]
