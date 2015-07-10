@@ -6,26 +6,18 @@ title: dailyplay
 
   %tr
     = partial 'td_nav', locals: {rowspan: 4}
+
     = partial 'td_cell', locals: data[:discovery].merge(rowspan: 1)
-    %td{valign: :top, rowspan: 2}
-      = partial 'cell', locals: data[:tv]
-    %td{valign: :top, rowspan: 2}
-      = partial 'cell', locals: data[:bass]
-    %td{valign: :top, rowspan: 1}
-      = partial 'cell', locals: data[:buy_sell]
+    = partial 'td_cell', locals: data[:tv].merge( rowspan: 2)
+    = partial 'td_cell', locals: data[:bass].merge( rowspan: 2)
+    = partial 'td_cell', locals: data[:buy_sell].merge( rowspan: 1)
 
   %tr
-    %td{valign: :top, rowspan: 1}
-      = partial 'cell', locals: data[:discovery_music]
-    %td{valign: :top, rowspan: 1}
-      = partial 'cell', locals: data[:buy_sell_pedals]
+    = partial 'td_cell', locals: data[:discovery_music].merge( rowspan: 1)
+    = partial 'td_cell', locals: data[:buy_sell_pedals].merge( rowspan: 1)
 
   %tr
-    %td{valign: :top, rowspan: 1}
-      = partial 'cell', locals: data[:discovery_film_comics]
-    %td{valign: :top, rowspan: 1}
-      = partial 'cell', locals: data[:ents_events]
-    %td{valign: :top, rowspan: 1}
-      = partial 'cell', locals: data[:find_a_band]
-    %td{valign: :top, rowspan: 1}
-      = partial 'cell', locals: data[:buy_sell_bass]
+    = partial 'td_cell', locals: data[:discovery_film_comics].merge( rowspan: 1)
+    = partial 'td_cell', locals: data[:ents_events].merge( rowspan: 1)
+    = partial 'td_cell', locals: data[:find_a_band].merge( rowspan: 1)
+    = partial 'td_cell', locals: data[:buy_sell_bass].merge( rowspan: 1)
