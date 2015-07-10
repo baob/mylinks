@@ -6,28 +6,28 @@ title: dailyplay
 
   %tr
     %td{valign: :top, rowspan: 4}
-      = partial 'nav.html.haml'
+      = partial 'nav'
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:discovery]
+      = partial 'cell', locals: data[:discovery]
     %td{valign: :top, rowspan: 2}
-      = partial 'cell.html.haml', locals: data[:tv]
+      = partial 'cell', locals: data[:tv]
     %td{valign: :top, rowspan: 2}
-      = partial 'cell.html.haml', locals: data[:bass]
+      = partial 'cell', locals: data[:bass]
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:buy_sell]
+      = partial 'cell', locals: data[:buy_sell]
 
   %tr
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:discovery_music]
+      = partial 'cell', locals: data[:discovery_music]
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:buy_sell_pedals]
+      = partial 'cell', locals: data[:buy_sell_pedals]
 
   %tr
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:discovery_film_comics]
+      = partial 'cell', locals: data[:discovery_film_comics]
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:ents_events]
+      = partial 'cell', locals: data[:ents_events]
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:find_a_band]
+      = partial 'cell', locals: data[:find_a_band]
     %td{valign: :top, rowspan: 1}
-      = partial 'cell.html.haml', locals: data[:buy_sell_bass]
+      = partial 'cell', locals: data[:buy_sell_bass]
