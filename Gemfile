@@ -17,7 +17,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 gem 'sass'
 
 # Linter for the project scss
-gem 'scss-lint'
+gem 'scss_lint'
 
 # Autoprefixer
 gem 'middleman-autoprefixer'

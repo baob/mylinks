@@ -148,7 +148,7 @@ GEM
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
     sass (3.4.13)
-    scss-lint (0.38.0)
+    scss_lint (0.40.1)
       rainbow (~> 2.0)
       sass (~> 3.4.1)
     shellany (0.0.1)
@@ -189,7 +189,7 @@ DEPENDENCIES
   nokogiri
   rspec
   sass
-  scss-lint
+  scss_lint
   terminal-notifier-guard
   tzinfo-data
   wdm (~> 0.1.0)
