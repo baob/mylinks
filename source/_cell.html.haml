@@ -2,13 +2,15 @@
 title: CELL
 ---
 
-- target = locals['target'] || '_blank'
+- target       = locals['target'] || '_blank'
+- local_title  = locals['title'] || 'No Title Given'
+- elements     = locals['elements'] || []
 
 %h2
-  = locals['title']
+  = local_title
 
 %table{border: 0}
-  - locals['elements'].each do |elem|
+  - elements.each do |elem|
     %tr
       %td
         - elem.each do |tag, attribs|

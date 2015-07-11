@@ -7,16 +7,17 @@ title: dailywork
   %tr
     = partial 'td', locals: {rows: 3, sub: :nav}
 
-    = partial 'td', locals: {rows: 3, content: data[:bookmarks]}
-
     = partial 'td', locals: {rows: 1, content: data[:general]}
     = partial 'td', locals: {rows: 1, content: data[:workflow]}
     = partial 'td', locals: {rows: 1, content: data[:code]}
+    = partial 'td', locals: {rows: 1, content: data[:campus]}
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:sandbox]}
     = partial 'td', locals: {rows: 1, content: data[:devint]}
     = partial 'td', locals: {rows: 1, content: data[:prod]}
+
+    = partial 'td', locals: {rows: 2, content: data[:admin]}
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:cloud]}
