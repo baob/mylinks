@@ -40,6 +40,9 @@ guard :rspec, cmd: "bundle exec rspec", all_on_start: true, all_on_pass: true do
   ruby = dsl.ruby
   dsl.watch_spec_files_for(ruby.lib_files)
 
+  # Middleman source files
+  watch(%r{^source/(.+).haml$}) { "#{rspec.spec_dir}/middleman_build_spec.rb" }
+
   # Rails files
   rails = dsl.rails(view_extensions: %w(erb haml slim))
   dsl.watch_spec_files_for(rails.app_files)
