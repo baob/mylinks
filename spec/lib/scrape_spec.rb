@@ -1,6 +1,7 @@
 require_relative '../../lib/scrape'
 require 'fileutils'
 require 'yaml'
+require 'pry'
 
 describe Scrape do
   describe 'instantiated without params' do
@@ -40,7 +41,7 @@ describe Scrape do
         subject.clear
       end
 
-      %w( daily dailyplay ).each do |page|
+      %w( daily links ).each do |page|
         specify "creates directory #{page} in directory data" do
           expect { subject.run }.to change{ Dir.exist?( File.join(test_dir, page)) }.to be_truthy
         end
