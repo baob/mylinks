@@ -30,3 +30,5 @@ gem 'guard'
 gem 'guard-rspec'
 gem 'terminal-notifier-guard'
 gem 'nokogiri'
+
+gem 'middleman-dotenv'

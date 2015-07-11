@@ -1,3 +1,7 @@
+activate :dotenv
+
+puts ENV['DATA_DIR']
+
 ###
 # Compass
 ###
