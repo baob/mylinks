@@ -1,0 +1,24 @@
+---
+title: dailywork
+---
+- data = yaml_load_files('dailywork')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 3, sub: :nav}
+
+    = partial 'td', locals: {rows: 3, content: data[:bookmarks]}
+
+    = partial 'td', locals: {rows: 1, content: data[:general]}
+    = partial 'td', locals: {rows: 1, content: data[:workflow]}
+    = partial 'td', locals: {rows: 1, content: data[:code]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:sandbox]}
+    = partial 'td', locals: {rows: 1, content: data[:devint]}
+    = partial 'td', locals: {rows: 1, content: data[:prod]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:cloud]}
+    = partial 'td', locals: {rows: 1, content: data[:tools_cribs]}
+    = partial 'td', locals: {rows: 1, content: data[:rails_and_ruby]}
