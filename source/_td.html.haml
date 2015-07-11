@@ -1,0 +1,10 @@
+---
+title: TD_CELL
+---
+- rows    = locals[:rows] || 1
+- cols    = locals[:cols] || 1
+- content = locals[:content] || {}
+- sub     = locals[:sub] || 'cell'
+
+%td{ valign: :top, rowspan: rows, colspan: cols }
+  = partial sub, locals: content
