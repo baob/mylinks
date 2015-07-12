@@ -1,0 +1,17 @@
+---
+title: Play - Ents
+---
+- data = yaml_load_files('playents')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 3, sub: :nav}
+
+    = partial 'td', locals: {rows: 1, content: data[:bands]}
+    = partial 'td', locals: {rows: 1, content: data[:venues]}
+    = partial 'td', locals: {rows: 1, content: data[:blues]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:directories]}
+    = partial 'td', locals: {rows: 1, content: data[:cinema]}
+    = partial 'td', locals: {rows: 1, content: data[:artists]}
