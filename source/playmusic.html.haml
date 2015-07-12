@@ -1,0 +1,18 @@
+---
+title: Play - Music
+---
+- data = yaml_load_files('playmusic')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 3, sub: :nav}
+
+    = partial 'td', locals: {rows: 1, content: data[:strings_sets]}
+    = partial 'td', locals: {rows: 2, content: data[:instruments]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:single_strings]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:recorded_music]}
+    = partial 'td', locals: {rows: 1, content: data[:blues]}
