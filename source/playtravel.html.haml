@@ -1,0 +1,12 @@
+---
+title: Play - Travel
+---
+- data = yaml_load_files('playtravel')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 1, sub: :nav}
+
+    = partial 'td', locals: {rows: 1, content: data[:flights_airlines]}
+    = partial 'td', locals: {rows: 1, content: data[:flights_aggregators]}
+    = partial 'td', locals: {rows: 1, content: data[:flights_aggregators_2nd_level]}
