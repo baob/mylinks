@@ -13,9 +13,11 @@ title: CELL
   - elements.each do |elem|
     %tr
       %td
-        - elem.each do |tag, attribs|
-          - if tag == 'anchor'
-            %a{href: attribs['href'], target: target}
-              = attribs['text']
-          - elsif tag == 'hr'
+        - if elem.is_a? String
+          - if elem == 'hr'
             %hr
+        - else
+          - elem.each do |tag, attribs|
+            - if tag == 'anchor'
+              %a{href: attribs['href'], target: target}
+                = attribs['text']

@@ -1,0 +1,21 @@
+---
+title: Daily
+---
+- data = yaml_load_files('daily')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 4, sub: :nav}
+
+    = partial 'td', locals: {rows: 2, content: data[:really_daily]}
+    = partial 'td', locals: {rows: 1, content: data[:really_weekly]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:job_hunt]}
+
+  %tr
+    = partial 'td', locals: {rows: 2, content: data[:ego]}
+    = partial 'td', locals: {rows: 1, content: data[:reference]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:frequent]}
