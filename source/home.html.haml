@@ -1,0 +1,11 @@
+---
+title: Home
+---
+- data = yaml_load_files('home')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 2, sub: :nav}
+
+    = partial 'td', locals: {rows: 1, content: data[:services]}
+    = partial 'td', locals: {rows: 1, content: data[:local_servers]}
