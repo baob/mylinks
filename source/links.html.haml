@@ -1,0 +1,12 @@
+---
+title: Links
+---
+- data = yaml_load_files('links')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 1, sub: :nav}
+
+    = partial 'td', locals: {rows: 1, content: data[:search]}
+    = partial 'td', locals: {rows: 1, content: data[:reference]}
+    = partial 'td', locals: {rows: 1, content: data[:news]}
