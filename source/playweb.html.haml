@@ -1,0 +1,11 @@
+---
+title: Play - Web
+---
+- data = yaml_load_files('playweb')
+%table{border: 1, cellpadding: 9}
+
+  %tr
+    = partial 'td', locals: {rows: 1, sub: :nav}
+
+    = partial 'td', locals: {rows: 1, content: data[:blogging_rss]}
+    = partial 'td', locals: {rows: 1, content: data[:stats]}
