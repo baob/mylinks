@@ -35,3 +35,5 @@ gem 'middleman-dotenv'
 
 # specify version of aruba to include rspec integration
 gem 'aruba', git: 'https://github.com/cucumber/aruba', ref: '51cf61ed9e'
+
+gem 'rake'
