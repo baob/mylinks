@@ -5,19 +5,14 @@ title: dailyplay
 %table{border: 1, cellpadding: 9}
 
   %tr
-    = partial 'td', locals: {rows: 4, sub: :nav}
+    = partial 'td', locals: {rows: 3, sub: :nav}
 
     = partial 'td', locals: {rows: 1, content: data[:discovery]}
-    = partial 'td', locals: {rows: 2, content: data[:tv]}
-    = partial 'td', locals: {rows: 2, content: data[:bass]}
-    = partial 'td', locals: {rows: 1, content: data[:buy_sell]}
+    = partial 'td', locals: {rows: 2, content: data[:ents_events]}
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:discovery_music]}
-    = partial 'td', locals: {rows: 1, content: data[:buy_sell_pedals]}
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:discovery_film_comics]}
-    = partial 'td', locals: {rows: 1, content: data[:ents_events]}
-    = partial 'td', locals: {rows: 1, content: data[:find_a_band]}
-    = partial 'td', locals: {rows: 1, content: data[:buy_sell_bass]}
+    = partial 'td', locals: {rows: 1, content: data[:buy_sell]}
