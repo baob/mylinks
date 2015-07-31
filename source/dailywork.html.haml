@@ -11,15 +11,17 @@ title: dailywork
     = partial 'td', locals: {rows: 1, content: data[:workflow]}
     = partial 'td', locals: {rows: 1, content: data[:code]}
     = partial 'td', locals: {rows: 1, content: data[:campus]}
+    = partial 'td', locals: {rows: 1, content: data[:rails_and_ruby]}
+
+  %tr
+    = partial 'td', locals: {rows: 1, content: data[:deploy]}
+    = partial 'td', locals: {rows: 1, content: data[:prod]}
+    = partial 'td', locals: {rows: 1, content: data[:hub]}
+
+    = partial 'td', locals: {rows: 2, content: data[:admin]}
+    = partial 'td', locals: {rows: 1, content: data[:cloud]}
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:ci]}
-    = partial 'td', locals: {rows: 1, content: data[:deploy]}
-    = partial 'td', locals: {rows: 1, content: data[:prod]}
-
-    = partial 'td', locals: {rows: 2, content: data[:admin]}
-
-  %tr
-    = partial 'td', locals: {rows: 1, content: data[:cloud]}
     = partial 'td', locals: {rows: 1, content: data[:tools_cribs]}
-    = partial 'td', locals: {rows: 1, content: data[:rails_and_ruby]}
+    = partial 'td', locals: {rows: 1, content: data[:searches]}
