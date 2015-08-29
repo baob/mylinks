@@ -40,3 +40,6 @@ gem 'rake'
 
 # TODO: bump activesupport due to vulnerability (when middleman allows)
 # gem 'activesupport', '>= 4.2.2'
+
+# bump rack due to vulnerability (when middleman allows)
+gem 'rack', '>= 1.6.2'
