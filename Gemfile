@@ -43,3 +43,6 @@ gem 'rake'
 
 # bump rack due to vulnerability (when middleman allows)
 gem 'rack', '>= 1.6.2'
+
+# bump uglifier due to vulnerability
+gem 'uglifier', '>= 2.7.2'

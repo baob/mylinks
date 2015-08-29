@@ -60,7 +60,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.0.7)
-    execjs (2.5.2)
+    execjs (2.6.0)
     ffi (1.9.8)
     formatador (0.2.5)
     gherkin (2.12.2)
@@ -87,7 +87,7 @@ GEM
       uber (~> 0.0.4)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    json (1.8.2)
+    json (1.8.3)
     kramdown (1.7.0)
     listen (2.10.0)
       celluloid (~> 0.16.0)
@@ -202,7 +202,7 @@ GEM
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.13)
-    uglifier (2.7.1)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
@@ -226,4 +226,5 @@ DEPENDENCIES
   scss-lint
   terminal-notifier-guard
   tzinfo-data
+  uglifier (>= 2.7.2)
   wdm (~> 0.1.0)
