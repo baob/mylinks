@@ -37,3 +37,6 @@ gem 'middleman-dotenv'
 gem 'aruba', git: 'https://github.com/cucumber/aruba', ref: '51cf61ed9e'
 
 gem 'rake'
+
+# TODO: bump activesupport due to vulnerability (when middleman allows)
+# gem 'activesupport', '>= 4.2.2'
