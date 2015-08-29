@@ -1,27 +1,29 @@
 ---
 title: dailywork
 ---
-- data = yaml_load_files('dailywork')
+- data_dailywork = yaml_load_files('dailywork')
+- data_daily = yaml_load_files('daily')
 %table{border: 1, cellpadding: 9}
 
   %tr
     = partial 'td', locals: {rows: 3, sub: :nav}
 
-    = partial 'td', locals: {rows: 1, content: data[:general]}
-    = partial 'td', locals: {rows: 1, content: data[:workflow]}
-    = partial 'td', locals: {rows: 1, content: data[:code]}
-    = partial 'td', locals: {rows: 1, content: data[:campus]}
-    = partial 'td', locals: {rows: 1, content: data[:rails_and_ruby]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:general]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:workflow]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:code]}
+    = partial 'td', locals: {rows: 3, content: data_daily[:incoming]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:campus]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:rails_and_ruby]}
 
   %tr
-    = partial 'td', locals: {rows: 1, content: data[:deploy]}
-    = partial 'td', locals: {rows: 1, content: data[:prod]}
-    = partial 'td', locals: {rows: 1, content: data[:hub]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:deploy]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:prod]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:hub]}
 
-    = partial 'td', locals: {rows: 2, content: data[:admin]}
-    = partial 'td', locals: {rows: 1, content: data[:cloud]}
+    = partial 'td', locals: {rows: 2, content: data_dailywork[:admin]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:cloud]}
 
   %tr
-    = partial 'td', locals: {rows: 1, content: data[:ci]}
-    = partial 'td', locals: {rows: 1, content: data[:tools_cribs]}
-    = partial 'td', locals: {rows: 1, content: data[:searches]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:ci]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:tools_cribs]}
+    = partial 'td', locals: {rows: 1, content: data_dailywork[:searches]}
