@@ -15,10 +15,13 @@ title: Work Monitoring
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:sherlock_dashing]}
+    = partial 'td', locals: {rows: 1, content: data[:subjects_dashing]}
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:sherlock_grafana]}
+    = partial 'td', locals: {rows: 1, content: data[:subjects_grafana]}
 
   %tr
     = partial 'td', locals: {rows: 1, content: data[:sherlock_nagios]}
+    = partial 'td', locals: {rows: 1, content: data[:subjects_nagios]}
 
